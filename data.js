@@ -6,32 +6,32 @@ window.DG = {
     {
       id: "frickel", name: "Frickel", nick: "OG Winner 2025",
       photo: "img/spelers/frickel.jpg", video: "video/worp3.mp4",
-      bio: "Won it all in 2025 and has not stopped mentioning it since. Opened Friday with a birdie on hole 1 and took the day again, but after all the cheese at the house he might need a tree to shit behind before he needs a basket. He paid for the trophies himself, so for him winning is just getting his investment back."
+      bio: "Won it all in 2025 and has not stopped mentioning it since. Opened Friday with a birdie on hole 1 and took the day again, but after all the cheese at the house he might need a tree to shit behind before he needs a basket."
     },
     {
       id: "maur", name: "Maur", nick: "Sniperdisccer",
       photo: "img/spelers/maur.jpg", video: "video/worp2.mp4",
-      bio: "The noetser with only a forehand. Every throw is a forehand, every missed putt gets a complaint, and somehow it works. Designated driver, so if your disc is missing, check his boot first."
+      bio: "The noetser with only a forehand. Does not like everyone watching him when he throws, but does not like it either when people keep talking around him. So stand still, stay quiet, look the other way, and maybe the sniper hits."
     },
     {
       id: "cedric", name: "Cédric", nick: "Sky High Flyer",
       photo: "img/spelers/cedric.jpg", video: "video/worp5.mp4",
-      bio: "His discs fly sky high, as long as he remembers to bring them. The moment the vape comes out, his discs stay behind on the last tee. Always laughing, even after a six, and the one holding the phone in every group selfie."
+      bio: "His discs fly sky high, as long as he remembers to bring them. The moment the vape comes out, his discs stay behind on the last tee. Always the first to ask for a break, to prep the vape or open a bottle of rosé."
     },
     {
       id: "simon", name: "Simon", nick: "Birdiemaster",
       photo: "img/spelers/simon.jpg", video: "video/worp4.mp4",
-      bio: "Calls himself the Birdiemaster, yet did not throw a single three on Friday, on a course full of par threes. Might need an ice cube to win this one. On the bright side, the most consistent player in the group: you always know what you are going to get."
+      bio: "The Birdiemaster, although so far the trees have seen more of his discs than the baskets. Hits every trunk on the course and keeps smiling. But we all know one day the birdies will come, and Simon will win it all."
     },
     {
       id: "laurens", name: "Laurens", nick: "FOMO-Homo",
       photo: "img/spelers/laurens.jpg", video: null,
-      bio: "Already missed the first round on Friday, because Rosa is taking it all. Rosa is his newborn daughter, and she clearly outranks a disc golf trophy. Runs his own physio practice, so once he is back he knows exactly which muscle to blame for every bad throw."
+      bio: "Already missed the first round on Friday, because Rosa is taking it all. Invested in a full bag of brand new discs, just to not be here. The best equipped player in the group, at home."
     },
     {
-      id: "nico", name: "Nico", nick: "The drone pilot",
+      id: "nico", name: "Nico", nick: "The drone pilot", plays: false,
       photo: "img/spelers/nico.jpg", video: null,
-      bio: "Our drone pilot. Only problem: he is still learning to fly his drone. The footage of Friday night proves he is getting there, slowly. Let us hope his discs land more gently than his drone."
+      bio: "Our drone pilot, only problem: he is still learning to fly that drone. Not one for throwing discs with us, but judging by the footage he might want to try. A disc at least comes back down."
     }
   ],
 
@@ -81,7 +81,7 @@ window.DG = {
     lievin: null
   },
 
-  lostDiscs: { frickel: 0, maur: 0, cedric: 0, simon: 0, laurens: 0, nico: 0 },
+  lostDiscs: { frickel: 0, maur: 0, cedric: 0, simon: 0, laurens: 0 },
 
   photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10"],
 

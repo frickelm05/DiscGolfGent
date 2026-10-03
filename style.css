@@ -16,7 +16,7 @@
   --slab: "Roboto Slab", Georgia, serif;
 }
 
-* { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 64px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
@@ -139,7 +139,7 @@ h3 { margin: 0; font-family: var(--slab); font-weight: 800; letter-spacing: -0.0
 .route { list-style: none; margin: 0; padding: 0; }
 .route li {
   position: relative;
-  padding: 0 0 30px 34px;
+  padding: 0 0 34px 38px;
 }
 .route li::before {
   content: ""; position: absolute; left: 8px; top: 8px; bottom: -8px;
@@ -272,3 +272,8 @@ dialog#lightbox::backdrop { background: rgba(20, 18, 15, .92); }
 .dock a:hover, .dock a:focus-visible { background: rgba(255,255,255,.14); }
 
 .foot { padding: 48px 0 24px; color: var(--ink-2); font-size: 15px; }
+
+@media (max-width: 899px) {
+  h2, .hero-title, .hero-sub, .lead, .leader-line { text-align: center; }
+  .hero-sub, .lead { margin-left: auto; margin-right: auto; }
+}

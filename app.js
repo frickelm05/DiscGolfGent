@@ -32,7 +32,8 @@
   }
 
   // ---------- weekend standing ----------
-  const standing = D.players.map((s) => {
+  const competitors = D.players.filter((s) => s.plays !== false);
+  const standing = competitors.map((s) => {
     let tot = 0, diff = 0, n = 0;
     played.forEach((c) => {
       const row = results[c.id].rows.find((r) => r.id === s.id);
@@ -194,7 +195,7 @@
   const lost = D.lostDiscs;
   const lostTot = sum(Object.values(lost));
   $("lostTotal").innerHTML = `<b>${lostTot}</b><span>${lostTot === 1 ? "disc is" : "discs are"} lying somewhere in France</span>`;
-  const lostSorted = D.players.slice().sort((a, b) => (lost[b.id] || 0) - (lost[a.id] || 0));
+  const lostSorted = competitors.slice().sort((a, b) => (lost[b.id] || 0) - (lost[a.id] || 0));
   $("lostList").innerHTML = lostSorted.map((s) => {
     const k = lost[s.id] || 0;
     const marks = k ? Array.from({ length: k }, () => `<i></i>`).join("") : `<em>all discs still here</em>`;
