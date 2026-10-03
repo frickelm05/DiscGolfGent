@@ -81,7 +81,7 @@ window.DG = {
     lievin: null
   },
 
-  lostDiscs: { frickel: 1, maur: 0, cedric: 0, simon: 0, laurens: 0 },
+  lostDiscs: { frickel: 2, maur: 0, cedric: 0, simon: 0, laurens: 0 },
 
   photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10","foto11","foto12","foto13","foto14","foto15","foto16","foto17","foto18","foto19","foto20","foto21","foto22","foto23","foto24","foto25","foto26"],
 
