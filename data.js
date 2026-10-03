@@ -6,7 +6,7 @@ window.DG = {
     {
       id: "frickel", name: "Frickel", nick: "OG Winner 2025",
       photo: "img/spelers/frickel.jpg", video: "video/worp3.mp4",
-      bio: "Won it all in 2025 and has not stopped mentioning it since. Opened Friday with a birdie on hole 1 and took the day again, but after all the cheese at the house he might need a tree to shit behind before he needs a basket."
+      bio: "Won it all in 2025 and has not stopped mentioning it since. Opened Friday with a birdie on hole 1 and took the day again, but with all the cheese he keeps eating, he might need a tree to shit behind before he needs a basket."
     },
     {
       id: "maur", name: "Maur", nick: "Sniperdisccer",
