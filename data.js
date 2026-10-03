@@ -29,7 +29,7 @@ window.DG = {
       bio: "Already missed the first round on Friday, because Rosa is taking it all. Invested in a full bag of brand new discs, just to not be here. The best equipped player in the group, at home."
     },
     {
-      id: "nico", name: "Nico", nick: "The drone pilot", plays: false,
+      id: "nico", name: "Nico", nick: "The drone pilot",
       photo: "img/spelers/nico.jpg", video: null,
       bio: "Our drone pilot, only problem: he is still learning to fly that drone. Not one for throwing discs with us, but judging by the footage he might want to try. A disc at least comes back down."
     }
@@ -50,21 +50,24 @@ window.DG = {
       ]
     },
     {
-      id: "vendin", day: "Saturday", date: "2026-10-03",
+      id: "lievin", day: "Saturday", date: "2026-10-03",
+      name: "Val de Souchez", town: "Liévin", short: "Liévin",
+      color: "#2E9157", drive: "11 min", holes: 18, par: 60,
+      udisc: "https://udisc.com/courses/lievin-val-de-souchez-tXh4",
+      geo: "50.410641,2.793863",
+      text: "A big hilly park with open holes, wooded sections and some lovely downhill shots. There is water on the course, with an alternate hole when the level is high. The best rated course of the three.",
+      holeInfo: [
+        [3,76],[4,139],[3,115],[3,93],[3,94],[3,101],[4,156],[3,104],[3,108],
+        [3,90],[3,84],[3,84],[6,110],[3,99],[3,83],[3,104],[4,168],[3,62]
+      ]
+    },
+    {
+      id: "vendin", day: "Sunday", date: "2026-10-04",
       name: "Parc des Faitelles", town: "Vendin-le-Vieil", short: "Vendin",
       color: "#EF7D1A", drive: "14 min", holes: 18, par: 58,
       udisc: "https://udisc.com/courses/vendin-le-vieil-parc-des-faitelles-u3I2",
       geo: "50.462105,2.849380",
       text: "A park course that is mostly flat, mixing open holes with stretches between the trees. Looks easier than it plays. Toilets at the Trait d'Union sports centre next door.",
-      holeInfo: null
-    },
-    {
-      id: "lievin", day: "Sunday", date: "2026-10-04",
-      name: "Val de Souchez", town: "Liévin", short: "Liévin",
-      color: "#2E9157", drive: "11 min", holes: 18, par: 57,
-      udisc: "https://udisc.com/courses/lievin-val-de-souchez-tXh4",
-      geo: "50.410641,2.793863",
-      text: "A big hilly park with open holes, wooded sections and some lovely downhill shots. There is water on the course, with an alternate hole when the level is high. The best rated course of the three, so a worthy final.",
       holeInfo: null
     }
   ],
@@ -77,11 +80,17 @@ window.DG = {
       cedric:  [5,3,5,6,3,3,6,4,4,5,4,5,5,6,6,4,3,3],
       simon:   [5,4,5,6,4,4,7,5,4,5,4,5,4,5,6,5,4,4]
     },
-    vendin: null,
-    lievin: null
+    lievin: {
+      frickel: [3,4,3,5,3,4,4,3,3,3,3,4,3,3,3,3,4,3],
+      cedric:  [3,4,4,5,4,4,4,3,5,4,3,3,3,3,4,3,5,3],
+      maur:    [3,4,6,6,3,4,5,4,5,4,4,3,4,4,4,4,6,3],
+      simon:   [3,6,4,4,3,4,5,4,6,4,4,3,5,5,3,4,5,5],
+      nico:    [3,7,5,5,4,5,5,5,5,5,3,4,4,3,4,4,5,4]
+    },
+    vendin: null
   },
 
-  lostDiscs: { frickel: 2, maur: 0, cedric: 0, simon: 0, laurens: 0 },
+  lostDiscs: { frickel: 2, maur: 0, cedric: 0, simon: 0, laurens: 0, nico: 0 },
 
   photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10","foto11","foto12","foto13","foto14","foto15","foto16","foto17","foto18","foto19","foto20","foto21","foto22","foto23","foto24","foto25","foto26"],
 
