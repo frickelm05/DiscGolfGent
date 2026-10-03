@@ -168,7 +168,7 @@ h3 { margin: 0; font-family: var(--slab); font-weight: 800; letter-spacing: -0.0
   .route li::before, .route li:last-child::before { left: 0; right: -28px; top: 8px; bottom: auto; width: auto; height: 6px; }
   .route li:last-child::before { right: 0; }
   .route li::after { left: 0; top: 0; }
-  .players { grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 48px; }
+  .players { grid-template-columns: 1fr 1fr; column-gap: 56px; row-gap: 72px; }
   .wall { columns: 4; }
 }
 
@@ -227,7 +227,7 @@ h3 { margin: 0; font-family: var(--slab); font-weight: 800; letter-spacing: -0.0
 .marks em { font-style: normal; font-weight: 500; color: var(--ink-2); font-size: 15px; }
 
 /* ---------- players ---------- */
-.players { display: grid; gap: 40px; }
+.players { display: grid; gap: 64px; margin-top: 32px; }
 .p-head { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
 .p-pic img, .nofoto-big { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; flex: none; display: block; }
 .nofoto-big { display: grid; place-items: center; background: var(--line); font-size: 40px; font-weight: 800; color: var(--ink-2); }
