@@ -69,9 +69,10 @@
       <p class="r-day">${esc(c.day)}</p>
       <h3>${esc(c.town)}<span>${esc(c.name)}</span></h3>
       <p class="r-facts">${c.holes} holes, par ${c.par}, ${esc(c.drive)} drive</p>
-      <p>${esc(c.text)}</p>
+      <div class="r-map"><iframe src="https://maps.google.com/maps?q=${c.geo}&t=k&z=16&output=embed" loading="lazy" title="Satellite view of ${esc(c.name)}" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
       <p class="r-state">${esc(state)}</p>
-      <a class="r-link" href="${c.udisc}" target="_blank" rel="noopener">View on UDisc</a>
+      <p>${esc(c.text)}</p>
+      <p class="r-links"><a href="https://www.google.com/maps/dir/?api=1&destination=${c.geo}" target="_blank" rel="noopener">Directions</a><a href="${c.udisc}" target="_blank" rel="noopener">View on UDisc</a></p>
     </li>`;
   }).join("");
 
