@@ -210,30 +210,53 @@
   });
   $("wall").innerHTML = tiles.join("");
 
-  // ---------- lightbox ----------
+  // ---------- lightbox with swipe ----------
   const lb = $("lightbox");
   const lbBody = lb.querySelector(".lb-body");
-  function openLb(html) {
-    lbBody.innerHTML = html;
+  const lbCount = lb.querySelector(".lb-count");
+  const items = Array.from(document.querySelectorAll("#wall .tile"));
+  let idx = 0;
+  function show(i) {
+    const old = lbBody.querySelector("video");
+    if (old) old.pause();
+    idx = (i + items.length) % items.length;
+    const t = items[idx];
+    lbBody.innerHTML = t.dataset.img
+      ? `<img src="${t.dataset.img}" alt="">`
+      : `<video src="${t.dataset.video}" poster="${t.dataset.poster}" controls playsinline></video>`;
+    lbCount.textContent = `${idx + 1} / ${items.length}`;
+    const next = items[(idx + 1) % items.length];
+    if (next && next.dataset.img) { const pre = new Image(); pre.src = next.dataset.img; }
+  }
+  function openAt(i) {
+    show(i);
     if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
-    const v = lbBody.querySelector("video");
-    if (v) v.play().catch(() => {});
+    document.body.style.overflow = "hidden";
   }
   function closeLb() {
     const v = lbBody.querySelector("video");
     if (v) v.pause();
-    lbBody.innerHTML = "";
     lb.close ? lb.close() : lb.removeAttribute("open");
   }
-  document.addEventListener("click", (e) => {
-    const t = e.target.closest("button[data-img],button[data-video]");
-    if (!t) return;
-    if (t.dataset.img) openLb(`<img src="${t.dataset.img}" alt="">`);
-    else openLb(`<video src="${t.dataset.video}" poster="${t.dataset.poster}" controls playsinline></video>`);
-  });
+  items.forEach((t, i) => t.addEventListener("click", () => openAt(i)));
   lb.querySelector(".lb-close").addEventListener("click", closeLb);
-  lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
-  lb.addEventListener("close", () => { lbBody.innerHTML = ""; });
+  lb.querySelector(".lb-prev").addEventListener("click", () => show(idx - 1));
+  lb.querySelector(".lb-next").addEventListener("click", () => show(idx + 1));
+  lb.addEventListener("click", (e) => { if (e.target === lb || e.target === lbBody) closeLb(); });
+  lb.addEventListener("close", () => { lbBody.innerHTML = ""; document.body.style.overflow = ""; });
+  lb.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") show(idx + 1);
+    if (e.key === "ArrowLeft") show(idx - 1);
+  });
+  let x0 = null, y0 = null;
+  lb.addEventListener("touchstart", (e) => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(idx + (dx < 0 ? 1 : -1));
+    else if (dy > 90 && Math.abs(dy) > Math.abs(dx)) closeLb();
+    x0 = y0 = null;
+  });
 
   // only one player video plays at a time
   document.addEventListener("play", (e) => {

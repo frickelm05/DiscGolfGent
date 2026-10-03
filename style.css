@@ -261,9 +261,13 @@ h3 { margin: 0; font-family: var(--slab); font-weight: 800; letter-spacing: -0.0
 
 /* ---------- lightbox ---------- */
 dialog#lightbox { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100%; height: 100%; }
-dialog#lightbox::backdrop { background: rgba(20, 18, 15, .92); }
-.lb-body { width: 100%; height: 100%; display: grid; place-items: center; padding: 56px 12px 24px; }
-.lb-body img, .lb-body video { max-width: 100%; max-height: calc(100vh - 90px); border-radius: var(--r-md); }
+dialog#lightbox::backdrop { background: rgba(20, 18, 15, .97); }
+.lb-body { width: 100%; height: 100%; display: grid; place-items: center; padding: 64px 12px 48px; touch-action: pan-y; }
+.lb-body img, .lb-body video { max-width: 100%; max-height: calc(100vh - 120px); border-radius: var(--r-md); }
+.lb-nav { position: fixed; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); font-size: 32px; line-height: 1; cursor: pointer; z-index: 2; display: grid; place-items: center; padding-bottom: 4px; }
+.lb-prev { left: 12px; }
+.lb-next { right: 12px; }
+.lb-count { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom)); margin: 0; text-align: center; color: #fff; font-weight: 700; font-size: 14px; }
 .lb-close { position: fixed; top: 12px; right: 12px; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #fff; font-size: 26px; line-height: 1; cursor: pointer; z-index: 2; }
 
 /* ---------- dock ---------- */
@@ -281,9 +285,18 @@ dialog#lightbox::backdrop { background: rgba(20, 18, 15, .92); }
 
 .foot { padding: 48px 0 24px; color: var(--ink-2); font-size: 15px; }
 
-@media (max-width: 899px) {
-  h2, .hero-title, .hero-sub, .lead, .leader-line { text-align: center; }
-  .hero-sub, .lead { margin-left: auto; margin-right: auto; }
+/* everything centered, also on desktop */
+h2, .hero-title, .hero-sub, .lead, .leader-line { text-align: center; }
+.hero-sub, .lead { margin-left: auto; margin-right: auto; max-width: 36em; }
+#leaderboard, #discs, #trophies { margin-left: auto; margin-right: auto; }
+.map { margin-left: auto; margin-right: auto; }
+.tabs { justify-content: center; }
+.card-head { text-align: left; }
+@media (min-width: 900px) {
+  .route li { text-align: center; }
+  .route li::after { left: 50%; margin-left: -11px; }
+  .r-links { justify-content: center; }
+  .player { text-align: left; }
 }
 
 @media (min-width: 900px) {
