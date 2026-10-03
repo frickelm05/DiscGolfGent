@@ -1,73 +1,73 @@
-// Alle gegevens van het weekend. Scores aanpassen gebeurt hier.
+// All weekend data. Scores are updated here.
 window.DG = {
-  titel: "Discgolf Kampioen Weekend 2026",
+  title: "Disc Golf Champions Weekend 2026",
 
-  spelers: [
+  players: [
     {
-      id: "frickel", naam: "Frickel", bijnaam: "Frikczzzzz",
-      foto: "img/spelers/frickel.jpg", video: "video/worp3.mp4",
-      bio: "Begon vrijdag met een birdie op hole 1 en dacht toen even dat hij pro was. Hole 15 heeft hem daar snel van genezen. Langste van de bende, dus ook het langste armbereik, en toch landt zijn disc soms bij de buren in de haag. Heeft de trofeeën zelf gekocht, dus winnen is voor hem gewoon zijn investering terugverdienen."
+      id: "frickel", name: "Frickel", nick: "Frikczzzzz",
+      photo: "img/spelers/frickel.jpg", video: "video/worp3.mp4",
+      bio: "Opened Friday with a birdie on hole 1 and briefly believed he had turned pro. Hole 15 cured him of that pretty fast. Tallest of the gang, so the longest reach, and still his disc ends up in the neighbours' hedge now and then. He paid for the trophies himself, so for him winning is just getting his investment back."
     },
     {
-      id: "maur", naam: "Maur", bijnaam: "De chauffeur",
-      foto: "img/spelers/maur.jpg", video: "video/worp2.mp4",
-      bio: "Kale kop, zonnebril en snor: de enige die er op het parcours uitziet alsof hij gesponsord wordt. Chauffeur van dienst, dus wie een disc kwijt is kijkt best eerst in zijn koffer. Speelde vrijdag een sterke ronde tot hole 14 hem een acht aansmeerde. Daar wil hij het liever niet over hebben."
+      id: "maur", name: "Maur", nick: "The driver",
+      photo: "img/spelers/maur.jpg", video: "video/worp2.mp4",
+      bio: "Bald head, sunglasses and a moustache: the only one on the course who looks like he has a sponsor. Designated driver, so if your disc is missing, check his boot first. Played a strong round on Friday until hole 14 handed him an eight. He would rather not talk about it."
     },
     {
-      id: "cedric", naam: "Cédric", bijnaam: "De selfiekoning",
-      foto: "img/spelers/cedric.jpg", video: "video/worp5.mp4",
-      bio: "Op elke groepsfoto staat zijn hoofd vooraan en het grootst, want hij houdt de gsm vast. Lacht altijd, ook na een zes. Sloot vrijdag af met een par op de laatste hole en vindt dat zelf het moment van het weekend tot nu toe."
+      id: "cedric", name: "Cédric", nick: "The selfie king",
+      photo: "img/spelers/cedric.jpg", video: "video/worp5.mp4",
+      bio: "In every group photo his head is in front and the biggest, because he is holding the phone. Always laughing, even after a six. Finished Friday with a par on the last hole and considers that the moment of the weekend so far."
     },
     {
-      id: "simon", naam: "Simon", bijnaam: "Simonitis",
-      foto: "img/spelers/simon.jpg", video: "video/worp4.mp4",
-      bio: "Op UDisc beter bekend als Simonitis, een aandoening waarbij de disc telkens net naast de korf valt. Gooide vrijdag op geen enkele hole een drie, op een parcours vol par drie. Dat is geen pech meer, dat is een stijl. Wel de meest constante speler van de groep: je weet altijd wat je krijgt."
+      id: "simon", name: "Simon", nick: "Simonitis",
+      photo: "img/spelers/simon.jpg", video: "video/worp4.mp4",
+      bio: "Known on UDisc as Simonitis, a condition where the disc always lands just next to the basket. Did not throw a single three on Friday, on a course full of par threes. At some point that stops being bad luck and becomes a style. On the bright side, the most consistent player in the group: you always know what you are going to get."
     },
     {
-      id: "laurens", naam: "Laurens", bijnaam: "De kiné",
-      foto: "img/spelers/laurens.jpg", video: null,
-      bio: "Kinesitherapeut met een eigen praktijk, dus de enige die na een slechte worp meteen weet welke spier hij de schuld kan geven. Poseert graag met een disc voor zijn gezicht, waarschijnlijk uit voorzorg. Staat nog niet op een scorekaart dit weekend."
+      id: "laurens", name: "Laurens", nick: "The physio",
+      photo: "img/spelers/laurens.jpg", video: null,
+      bio: "Runs his own physio practice, so he is the only one who knows exactly which muscle to blame after a bad throw. Likes to pose with a disc in front of his face, probably as a precaution. Not on a scorecard yet this weekend."
     },
     {
-      id: "nico", naam: "Nico", bijnaam: "Het mysterie",
-      foto: null, video: null,
-      bio: "Er bestaat geen enkele foto van Nico. Niemand weet hoe hij gooit, niemand weet hoe hij eruitziet. Sommigen zeggen dat hij de beste van de groep is, anderen dat hij niet bestaat. Zijn eerste scorekaart zal het uitwijzen."
+      id: "nico", name: "Nico", nick: "The mystery",
+      photo: null, video: null,
+      bio: "There is not a single photo of Nico. Nobody knows how he throws, nobody knows what he looks like. Some say he is the best of the group, others say he does not exist. His first scorecard will tell."
     }
   ],
 
-  // Volgorde = volgorde van het weekend
-  parcours: [
+  // In weekend order
+  courses: [
     {
-      id: "bully", dag: "Vrijdag", datum: "2026-10-02",
-      naam: "Parc du Terril du 2", plaats: "Bully-les-Mines", kort: "Bully",
-      kleur: "#6E45C9", rit: "5 min", holes: 18, par: 58,
+      id: "bully", day: "Friday", date: "2026-10-02",
+      name: "Parc du Terril du 2", town: "Bully-les-Mines", short: "Bully",
+      color: "#6E45C9", drive: "5 min", holes: 18, par: 58,
       udisc: "https://udisc.com/courses/bully-les-mines-parc-du-terril-du-2-LoPq",
-      tekst: "Gebouwd op een oude terril, dus klimmen tussen de holes. Technisch parcours met tunnelworpen door het bos, veel OB en mando's, en hole 13 over de groeve waar je best iemand laat spotten.",
+      text: "Built on an old mining slag heap, so expect climbing between holes. A technical course with tunnel shots through the woods, plenty of OB and mandos, and hole 13 across the quarry where you want someone spotting.",
       holeInfo: [
         [4,137],[3,70],[3,79],[4,124],[3,77],[3,85],[4,133],[3,74],[3,90],
         [3,96],[3,82],[3,99],[3,92],[3,115],[4,137],[3,86],[3,77],[3,60]
       ]
     },
     {
-      id: "vendin", dag: "Zaterdag", datum: "2026-10-03",
-      naam: "Parc des Faitelles", plaats: "Vendin-le-Vieil", kort: "Vendin",
-      kleur: "#EF7D1A", rit: "14 min", holes: 18, par: 58,
+      id: "vendin", day: "Saturday", date: "2026-10-03",
+      name: "Parc des Faitelles", town: "Vendin-le-Vieil", short: "Vendin",
+      color: "#EF7D1A", drive: "14 min", holes: 18, par: 58,
       udisc: "https://udisc.com/courses/vendin-le-vieil-parc-des-faitelles-u3I2",
-      tekst: "Parkparcours dat grotendeels vlak ligt, met een mix van open holes en stukken tussen de bomen. Ziet er makkelijker uit dan het is. Toiletten in sportcentrum Trait d'Union ernaast.",
+      text: "A park course that is mostly flat, mixing open holes with stretches between the trees. Looks easier than it plays. Toilets at the Trait d'Union sports centre next door.",
       holeInfo: null
     },
     {
-      id: "lievin", dag: "Zondag", datum: "2026-10-04",
-      naam: "Val de Souchez", plaats: "Liévin", kort: "Liévin",
-      kleur: "#2E9157", rit: "11 min", holes: 18, par: 57,
+      id: "lievin", day: "Sunday", date: "2026-10-04",
+      name: "Val de Souchez", town: "Liévin", short: "Liévin",
+      color: "#2E9157", drive: "11 min", holes: 18, par: 57,
       udisc: "https://udisc.com/courses/lievin-val-de-souchez-tXh4",
-      tekst: "Groot heuvelachtig park met open holes, stukken bos en een paar mooie worpen bergaf. Er ligt water op het parcours, met een alternatieve hole als het hoog staat. Het best gequoteerde parcours van de drie, dus een waardige finale.",
+      text: "A big hilly park with open holes, wooded sections and some lovely downhill shots. There is water on the course, with an alternate hole when the level is high. The best rated course of the three, so a worthy final.",
       holeInfo: null
     }
   ],
 
-  // Scores per hole, in de volgorde van holeInfo. Wie niet speelde: weglaten.
-  rondes: {
+  // Score per hole, in holeInfo order. Leave out whoever did not play.
+  rounds: {
     bully: {
       frickel: [3,3,5,4,4,3,5,4,4,4,3,4,4,4,8,3,3,4],
       maur:    [5,3,4,5,3,3,6,3,3,4,4,4,5,8,5,4,3,4],
@@ -78,17 +78,12 @@ window.DG = {
     lievin: null
   },
 
-  verlorenDiscs: { frickel: 0, maur: 0, cedric: 0, simon: 0, laurens: 0, nico: 0 },
+  lostDiscs: { frickel: 0, maur: 0, cedric: 0, simon: 0, laurens: 0, nico: 0 },
 
-  fotos: [
-    "foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10"
-  ],
+  photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10"],
 
-  videos: [
-    { src: "video/worp3.mp4", poster: "video/worp3.jpg", speler: "frickel" },
-    { src: "video/worp2.mp4", poster: "video/worp2.jpg", speler: "maur" },
-    { src: "video/worp5.mp4", poster: "video/worp5.jpg", speler: "cedric" },
-    { src: "video/worp4.mp4", poster: "video/worp4.jpg", speler: "simon" },
-    { src: "video/worp1.mp4", poster: "video/worp1.jpg", speler: null, titel: "Training in september" }
+  // Extra videos for the photo wall (player videos already sit in the bios)
+  wallVideos: [
+    { src: "video/worp1.mp4", poster: "video/worp1.jpg", title: "Practice in September" }
   ]
 };
