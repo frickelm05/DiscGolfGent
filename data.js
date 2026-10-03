@@ -83,11 +83,13 @@ window.DG = {
 
   lostDiscs: { frickel: 0, maur: 0, cedric: 0, simon: 0, laurens: 0 },
 
-  photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10"],
+  photos: ["foto01","foto02","foto03","foto05","foto06","foto07","foto08","foto09","foto10","foto11","foto12","foto13","foto14","foto15","foto16","foto17","foto18","foto19","foto20","foto21","foto22","foto23","foto24","foto25","foto26"],
 
   // Extra videos for the photo wall (player videos already sit in the bios)
   wallVideos: [
+    { src: "video/ceremonie2.mp4", poster: "video/ceremonie2.jpg", title: "Friday night ceremony" },
     { src: "video/ceremonie.mp4", poster: "video/ceremonie.jpg", title: "Friday night, filmed by the drone pilot" },
+    { src: "video/worp6.mp4", poster: "video/worp6.jpg", title: "Practice throw" },
     { src: "video/worp1.mp4", poster: "video/worp1.jpg", title: "Practice in September" }
   ]
 };

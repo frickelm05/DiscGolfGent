@@ -206,7 +206,7 @@
   const tiles = D.photos.map((f) => `<button class="tile" data-img="img/foto/${f}.jpg"><img src="img/foto/${f}-klein.jpg" alt="Group photo"></button>`);
   D.wallVideos.forEach((v, i) => {
     const t = `<button class="tile vid" data-video="${v.src}" data-poster="${v.poster}"><img src="${v.poster}" alt="Video: ${esc(v.title)}"><span class="vid-label">${esc(v.title)}</span></button>`;
-    tiles.splice(Math.min(tiles.length, 3 + i * 4), 0, t);
+    tiles.splice(Math.min(tiles.length, 3 + i * 6), 0, t);
   });
   $("wall").innerHTML = tiles.join("");
 
