@@ -263,3 +263,12 @@
     document.querySelectorAll("video.p-video").forEach((v) => { if (v !== e.target) v.pause(); });
   }, true);
 })();
+
+// menu bar only after scrolling past the hero
+(function () {
+  const dock = document.querySelector(".dock");
+  const hero = document.getElementById("top");
+  if (!dock || !hero || !("IntersectionObserver" in window)) return;
+  dock.classList.add("hidden");
+  new IntersectionObserver((e) => dock.classList.toggle("hidden", e[0].isIntersecting), { threshold: 0.35 }).observe(hero);
+})();

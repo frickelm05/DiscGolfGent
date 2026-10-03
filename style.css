@@ -58,24 +58,48 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
 .today i { width: 10px; height: 10px; border-radius: 50%; display: block; }
 
 /* ---------- hero ---------- */
-.hero { padding: 8px 0 8px; position: relative; }
-.banner { position: relative; margin: 0 -16px 20px; overflow: hidden; aspect-ratio: 16 / 9; background: var(--line); }
-.banner::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(to bottom, rgba(20,18,15,0), rgba(20,18,15,.55)); pointer-events: none; }
-.banner .hero-title { position: absolute; left: 16px; right: 16px; bottom: 17%; z-index: 1; color: #fff; text-shadow: 0 2px 16px rgba(0,0,0,.35); }
-.banner img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 45%; }
-@media (min-width: 760px) {
-  .banner { margin: 8px 0 24px; border-radius: var(--r-lg); aspect-ratio: 1600 / 738; }
-  .banner .hero-title { left: 36px; right: 36px; bottom: 17%; }
+.hero { padding: 0; position: relative; }
+.banner {
+  position: relative; overflow: hidden;
+  margin: 0 -16px;
+  height: calc(100svh - 56px);
+  min-height: 520px;
+  background: var(--ink);
+}
+.banner img {
+  position: absolute; left: 0; top: 0; width: 100%; height: 76%;
+  object-fit: cover; object-position: 51% 45%;
+  transform-origin: 51% 40%;
+  animation: drift 24s ease-in-out infinite alternate;
+}
+@keyframes drift { from { transform: scale(1); } to { transform: scale(1.09); } }
+@media (prefers-reduced-motion: reduce) { .banner img { animation: none; } }
+.banner::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 32%; height: 46%;
+  background: linear-gradient(to bottom, rgba(28,26,22,0) 0%, rgba(28,26,22,.75) 55%, var(--ink) 88%);
+  pointer-events: none;
+}
+.banner-text {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  padding: 0 20px calc(40px + env(safe-area-inset-bottom));
+  text-align: center; color: #fff;
 }
 .hero-title {
   margin: 0;
-  font-size: clamp(30px, 9vw, 80px);
+  font-size: clamp(40px, 11vw, 88px);
   font-weight: 800;
   font-family: var(--slab);
-  line-height: 1;
+  line-height: 1.02;
   letter-spacing: -0.02em;
+  color: #fff;
 }
-.hero-sub { color: var(--ink-2); max-width: 34em; margin: 14px 0 0; font-size: 18px; }
+.hero-sub { color: #DCD5C8; max-width: 30em; margin: 14px auto 0; font-size: 18px; line-height: 1.45; }
+@media (min-width: 760px) {
+  .banner { margin: 8px 0 0; border-radius: var(--r-lg); height: calc(100vh - 80px); max-height: 820px; }
+  .banner img { height: 100%; object-position: 50% 50%; }
+  .banner::after { top: 45%; height: 55%; background: linear-gradient(to bottom, rgba(28,26,22,0), rgba(28,26,22,.85)); }
+  .banner-text { padding-bottom: 48px; }
+}
 
 .leader-line { margin: -4px 0 16px; font-size: 18px; }
 .leader-line b { color: var(--orange); font-weight: 800; }
@@ -279,15 +303,17 @@ dialog#lightbox::backdrop { background: rgba(20, 18, 15, .97); }
   background: var(--ink); border-radius: 99px; padding: 5px;
   box-shadow: 0 8px 24px rgba(28, 26, 22, .25);
   max-width: calc(100vw - 24px);
+  transition: opacity .25s, transform .25s;
 }
+.dock.hidden { opacity: 0; transform: translate(-50%, 20px); pointer-events: none; }
 .dock a { color: #fff; text-decoration: none; font-size: 14px; font-weight: 600; padding: 9px 10px; border-radius: 99px; white-space: nowrap; }
 .dock a:hover, .dock a:focus-visible { background: rgba(255,255,255,.14); }
 
 .foot { padding: 48px 0 24px; color: var(--ink-2); font-size: 15px; }
 
 /* everything centered, also on desktop */
-h2, .hero-title, .hero-sub, .lead, .leader-line { text-align: center; }
-.hero-sub, .lead { margin-left: auto; margin-right: auto; max-width: 36em; }
+h2, .lead, .leader-line { text-align: center; }
+.lead { margin-left: auto; margin-right: auto; max-width: 36em; }
 #leaderboard, #discs, #trophies { margin-left: auto; margin-right: auto; }
 .map { margin-left: auto; margin-right: auto; }
 .tabs { justify-content: center; }
