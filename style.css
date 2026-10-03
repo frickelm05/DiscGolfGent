@@ -277,3 +277,7 @@ dialog#lightbox::backdrop { background: rgba(20, 18, 15, .92); }
   h2, .hero-title, .hero-sub, .lead, .leader-line { text-align: center; }
   .hero-sub, .lead { margin-left: auto; margin-right: auto; }
 }
+
+@media (min-width: 900px) {
+  .players { column-gap: 56px; row-gap: 72px; }
+}
