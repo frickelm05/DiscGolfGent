@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl-BE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discgolf Kampioen Weekend 2026</title>
+<meta name="description" content="Programma, scores en trofeeën van ons discgolfweekend rond Lens en Liévin.">
+<meta name="theme-color" content="#FBF8F2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><ellipse cx='32' cy='32' rx='28' ry='14' fill='%23EF7D1A'/><ellipse cx='32' cy='29' rx='18' ry='7' fill='none' stroke='white' stroke-width='3'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#stand" aria-label="Naar boven">
+    <svg viewBox="0 0 64 40" aria-hidden="true"><ellipse cx="32" cy="22" rx="29" ry="13" fill="#EF7D1A"/><ellipse cx="32" cy="19" rx="18" ry="6.5" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M2 10c8-4 16-6 22-6M0 18c6-3 12-5 18-6" stroke="#EF7D1A" stroke-width="2.5" stroke-linecap="round" fill="none" opacity=".5"/></svg>
+    <span>DiscGolfGent</span>
+  </a>
+  <span class="today" id="today"></span>
+</header>
+
+<main>
+
+  <section id="stand" class="hero">
+    <h1 class="hero-title">Kampioen&shy;weekend</h1>
+    <p class="hero-sub">Drie parcours rond Lens. Elke dag een parcourswinnaar, zondagavond één weekendwinnaar op de beste totaalscore.</p>
+    <div class="leader" id="leader"></div>
+    <ol class="race" id="race"></ol>
+  </section>
+
+  <section id="trofeeen" class="block">
+    <h2>Trofeeën</h2>
+    <div class="trophies">
+      <figure class="trophy-photo">
+        <img src="img/foto/foto03-klein.jpg" alt="De vier trofeeën: drie zilveren parcourswinnaars en de gouden overall winnaar" loading="lazy">
+      </figure>
+      <div class="cup-gold" id="cupGold"></div>
+      <ul class="cups" id="cups"></ul>
+    </div>
+  </section>
+
+  <section id="programma" class="block">
+    <h2>Programma</h2>
+    <p class="lead">Alles vanuit La Maison Orange in Bully-les-Mines. Rijtijden zijn ongeveer.</p>
+    <figure class="map">
+      <img src="img/kaart.jpg" alt="Kaart met de drie parcours en de rijtijden vanaf het huisje" loading="lazy">
+    </figure>
+    <ol class="route" id="route"></ol>
+  </section>
+
+  <section id="kaarten" class="block">
+    <h2>Scorekaarten</h2>
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div id="card"></div>
+  </section>
+
+  <section id="discs" class="block lost">
+    <h2>Verloren discs</h2>
+    <div class="lost-total" id="lostTotal"></div>
+    <ul class="lost-list" id="lostList"></ul>
+  </section>
+
+  <section id="spelers" class="block">
+    <h2>De spelers</h2>
+    <div class="players" id="players"></div>
+  </section>
+
+  <section id="fotos" class="block">
+    <h2>Fotomuur</h2>
+    <div class="wall" id="wall"></div>
+  </section>
+
+  <footer class="foot">
+    <p>Gemaakt voor zes vrienden, een koffer vol snacks en heel veel bomen.</p>
+  </footer>
+</main>
+
+<nav class="dock" aria-label="Secties">
+  <a href="#stand">Stand</a>
+  <a href="#kaarten">Scores</a>
+  <a href="#programma">Plan</a>
+  <a href="#spelers">Spelers</a>
+  <a href="#fotos">Foto's</a>
+</nav>
+
+<dialog id="lightbox" aria-label="Foto">
+  <button class="lb-close" aria-label="Sluiten">×</button>
+  <div class="lb-body"></div>
+</dialog>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
