@@ -68,7 +68,10 @@ window.DG = {
       udisc: "https://udisc.com/courses/vendin-le-vieil-parc-des-faitelles-u3I2",
       geo: "50.462105,2.849380",
       text: "A park course that is mostly flat, mixing open holes with stretches between the trees. Looks easier than it plays. Toilets at the Trait d'Union sports centre next door.",
-      holeInfo: null
+      holeInfo: [
+        [3,98],[3,99],[3,95],[3,76],[3,88],[4,145],[3,70],[4,142],[3,86],
+        [4,140],[3,92],[3,88],[3,52],[3,84],[3,69],[3,80],[4,140],[3,117]
+      ]
     }
   ],
 
@@ -87,7 +90,12 @@ window.DG = {
       simon:   [3,6,4,4,3,4,5,4,6,4,4,3,5,5,3,4,5,5],
       nico:    [3,7,5,5,4,5,5,5,5,5,3,4,4,3,4,4,5,4]
     },
-    vendin: null
+    vendin: {
+      frickel: [3,3,3,5,3,6,5,4,3,4,4,3,2,3,7,4,5,3],
+      simon:   [3,4,4,4,4,6,4,5,3,4,4,3,3,4,4,4,5,3],
+      maur:    [4,5,4,4,4,5,5,6,3,5,4,3,3,4,4,4,5,3],
+      cedric:  [4,4,3,5,4,6,3,6,3,4,4,5,2,4,6,4,5,4]
+    }
   },
 
   lostDiscs: { frickel: 2, maur: 0, cedric: 0, simon: 0, laurens: 0, nico: 0 },

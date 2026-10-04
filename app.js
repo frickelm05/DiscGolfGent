@@ -115,7 +115,7 @@
     let meta;
     if (s.n === 0) meta = `<span class="gap muted">no round yet</span>`;
     else if (s.n < maxRounds) meta = `<span class="gap muted">${s.n} of ${maxRounds} rounds</span>`;
-    else meta = i === 0 ? `<span class="gap first">in the lead</span>` : `<span class="gap">${s.tot - lead.tot} behind</span>`;
+    else meta = i === 0 ? `<span class="gap first">${allDone ? "weekend winner" : "in the lead"}</span>` : `<span class="gap">${s.tot - lead.tot} behind</span>`;
     return `<li class="${s.n === 0 ? "out" : ""}">
       <span class="pos">${s.n ? i + 1 : ""}</span>
       <span class="who">${avatar(sp)}<b>${esc(sp.name)}</b></span>
